@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
@@ -7,9 +8,11 @@ const Container = styled.div`
   height: 220vh;
   margin: 0;
   padding: 0;
+  ${mobile({ height: "125vh" })}
 `;
 const Sections = styled.div`
   margin: 15vh 15vw;
+  ${mobile({ margin: "10px 0" })}
 `;
 const Section = styled.div`
   display: flex;
@@ -21,11 +24,15 @@ const LeftFirst = styled.div`
 const HeadTitle = styled.h1`
   font-size: 6vh;
   margin-bottom: 10vh;
+  ${mobile({ fontSize: "25px", marginBottom: "20px" })}
 `;
-const Title = styled.h2``;
+const Title = styled.h2`
+  ${mobile({ fontSize: "20px" })}
+`;
 const Explanation = styled.span`
   font-size: 2.5vh;
   text-align: center;
+  ${mobile({ fontSize: "10px" })}
 `;
 const RightFirst = styled.div`
   flex: 1;
@@ -34,11 +41,14 @@ const Image = styled.img`
   margin-top: 20.8vh;
   object-fit: cover;
   height: 40vh;
+  ${mobile({ width: "150px", height: "190px", marginTop: "70px" })}
 `;
 const Left = styled.div`
   margin-right: 10vw;
 `;
-const Right = styled.div``;
+const Right = styled.div`
+  ${mobile({ marginRight: "10px" })}
+`;
 const SectionContainer = styled.div`
   display: flex;
   align-items: center;

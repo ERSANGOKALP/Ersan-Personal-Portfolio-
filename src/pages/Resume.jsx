@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { work_experience, education, skils } from "../data/data";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
@@ -12,8 +13,11 @@ const SectionFrame = styled.div`
   margin: 15vh 15vw 5vh 15vw;
   display: flex;
   flex-direction: column;
+  ${mobile({ margin: "2vh 0vw 5vh 2vw" })}
 `;
-const Header = styled.div``;
+const Header = styled.div`
+  ${mobile({ marginLeft: "20vw" })}
+`;
 const Head = styled.h1`
   font-size: 6vh;
   margin-bottom: 7vh;
@@ -30,12 +34,15 @@ const FirstSection = styled.div`
 const TopLeft = styled.div`
   flex: 1;
 `;
-const Title = styled.h2``;
+const Title = styled.h2`
+  ${mobile({ fontSize: "20px" })}
+`;
 const TopRight = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 30vw;
+  ${mobile({ marginLeft: "3vw" })}
 `;
 
 const DateDiv = styled.div`
@@ -43,7 +50,9 @@ const DateDiv = styled.div`
   flex: 1;
 `;
 const Date = styled.p``;
-const Time = styled.span``;
+const Time = styled.span`
+  ${mobile({ fontSize: "15px" })}
+`;
 const JobDiv = styled.div`
   flex: 3;
 `;
@@ -53,7 +62,9 @@ const Job = styled.h3`
 const ExplanationDiv = styled.div`
   margin-top: 0.5vh;
 `;
-const Explanation = styled.p``;
+const Explanation = styled.p`
+  ${mobile({ fontSize: "10px" })}
+`;
 
 const Center = styled.div`
   display: flex;
@@ -65,17 +76,21 @@ const CenterRight = styled.div`
   flex-direction: column;
   justify-content: center;
   margin-left: 30vw;
+  ${mobile({ marginLeft: "3vw" })}
 `;
 const Bottom = styled.div`
   display: flex;
   justify-content: center;
 `;
-const BottomLeft = styled.div``;
+const BottomLeft = styled.div`
+  flex: 1;
+`;
 const BottomRight = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
   margin-left: 30vw;
+  ${mobile({ marginLeft: "0" })}
 `;
 const SecondSection = styled.div`
   display: flex;

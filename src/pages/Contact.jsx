@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
@@ -9,10 +10,12 @@ const Container = styled.div`
 const Frame = styled.div`
   display: flex;
   margin: 10vh 15vw 10vh 15vw;
+  ${mobile({ margin: "10px 10px" })}
 `;
 
 const Left = styled.div`
   flex: 2;
+  ${mobile({ display: "none" })}
 `;
 const ContactDiv = styled.div`
   margin-bottom: 5vh;
@@ -39,13 +42,22 @@ const Right = styled.div`
 const Table = styled.div`
   display: flex;
   flex-wrap: wrap;
+  ${mobile({
+    flex: "1",
+    display: "flex",
+    flexDirection: "wrap",
+    alignItems: "center",
+    justifyContent: "center",
+  })}
 `;
 const TableDiv = styled.div`
   display: flex;
   flex-direction: column;
   margin: 3vh 3vw;
 `;
-const TableLabel = styled.label``;
+const TableLabel = styled.label`
+  ${mobile({ width: "80px" })}
+`;
 const TableInput = styled.input`
   width: 12vw;
   height: 5vh;
@@ -53,6 +65,16 @@ const TableInput = styled.input`
   &:hover {
     background-color: #fbe7c6;
   }
+  ${mobile({ width: "100px" })}
+`;
+const TableInputMessage = styled.input`
+  width: 20vw;
+  height: 12vh;
+  background-color: #f9fafa;
+  &:hover {
+    background-color: #fbe7c6;
+  }
+  ${mobile({ width: "120px", height: "7vh" })}
 `;
 
 const Button = styled.button`
@@ -66,6 +88,7 @@ const Button = styled.button`
   &:hover {
     background-color: #f9fafa;
   }
+  ${mobile({ width: "80px" })}
 `;
 
 const Contact = () => {
@@ -107,9 +130,7 @@ const Contact = () => {
               </TableDiv>
               <TableDiv>
                 <TableLabel>Message</TableLabel>
-                <TableInput
-                  style={{ height: "12vh", width: "20vw" }}
-                ></TableInput>
+                <TableInputMessage></TableInputMessage>
               </TableDiv>
 
               <Button>Submit</Button>
