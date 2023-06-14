@@ -1,16 +1,18 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   display: flex;
   padding: 0;
   background-color: #f9fafa;
-  height: 75vh;
+  height: 65vh;
 `;
 
 const Left = styled.div`
   margin-top: 10vh;
   margin-left: 20vw;
+  ${mobile({ marginLeft: "10vw" })}
 `;
 const Image = styled.img`
   object-fit: cover;
@@ -18,16 +20,20 @@ const Image = styled.img`
   width: 30vw;
   border-radius: 100%;
   flow: left;
+
+  ${mobile({ height: "30vh" })}
 `;
 const Right = styled.div`
   margin-top: 15vh;
   margin-left: 3vw;
+  ${mobile({ marginTop: "10vh" })}
 `;
 const Hello = styled.h1``;
 const About = styled.h2``;
 const Detail = styled.div`
   width: 20vw;
   text-align: justify;
+  ${mobile({ width: "40vw" })}
 `;
 const NavItems = styled.div`
   display: flex;
@@ -35,6 +41,7 @@ const NavItems = styled.div`
   justify-content: center;
   gap: 5vw;
   margin-top: 10vh;
+  ${mobile({ width: "10vw" })}
 `;
 const ResumeDiv = styled.div`
   display: flex;
@@ -53,6 +60,8 @@ const ResumeRound = styled.span`
     background-color: #f9fafa;
     border: solid 1px black;
   }
+
+  ${mobile({ width: "50px" })}
 `;
 const StyledLink = styled(Link)`
   position: relative;
@@ -76,6 +85,7 @@ const ProjectsRound = styled.span`
     background-color: #f9fafa;
     border: solid 1px black;
   }
+  ${mobile({ width: "50px" })}
 `;
 const Projects = styled.a`
   position: relative;
@@ -98,6 +108,7 @@ const ContactRound = styled.span`
     background-color: #f9fafa;
     border: solid 1px black;
   }
+  ${mobile({ width: "50px" })}
 `;
 const Contact = styled.a`
   position: relative;

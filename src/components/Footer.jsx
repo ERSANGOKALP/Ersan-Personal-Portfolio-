@@ -1,10 +1,12 @@
 import styled from "styled-components";
+import { mobile } from "../responsive";
 
 const Container = styled.div`
   background-color: #f9fafa;
   height: 15vh;
   margin: 0;
   padding: 5vh;
+  ${mobile({ padding: "0" })}
 `;
 
 const FooterItems = styled.div`
@@ -12,20 +14,29 @@ const FooterItems = styled.div`
   align-items: center;
   justify-content: space-between;
   margin: 0 3vw;
+  ${mobile({ margin: "0 3vw" })}
 `;
 
 const PhoneDiv = styled.div``;
-const Phone = styled.h4``;
+const Phone = styled.h4`
+  ${mobile({ marginLeft: "17px" })}
+`;
 const PhoneNumber = styled.span``;
 const EmailDiv = styled.div``;
-const Email = styled.h4``;
+const Email = styled.h4`
+  ${mobile({ marginLeft: "26px" })}
+`;
 const EmailDetail = styled.a`
   text-decoration: none;
   color: black;
 `;
-const FollowDiv = styled.div``;
+const FollowDiv = styled.div`
+  ${mobile({ alignItems: "center" })}
+`;
 const FollowTitle = styled.h4``;
-const FollowIcons = styled.div``;
+const FollowIcons = styled.div`
+  ${mobile({ marginLeft: "17px" })}
+`;
 const LinkedinAnchor = styled.a``;
 const LinkedinImg = styled.img`
   height: 20px;
@@ -38,6 +49,7 @@ const TwitterImg = styled.img`
 const OriginDiv = styled.div`
   display: flex;
   flex-direction: column;
+  ${mobile({ display: "none" })}
 `;
 const OriginLineOne = styled.span`
   font-size: 12px;
