@@ -6,11 +6,12 @@ const Container = styled.div`
   flex-direction: column;
   height: 67vh;
   background-color: #f9fafa;
+  ${mobile({ height: "71.5vh" })}
 `;
 const Frame = styled.div`
   display: flex;
   margin: 10vh 15vw 10vh 15vw;
-  ${mobile({ margin: "10px 10px" })}
+  ${mobile({ margin: "50px 10px 80px 10px" })}
 `;
 
 const Left = styled.div`
@@ -38,6 +39,7 @@ const Email = styled.a`
 `;
 const Right = styled.div`
   flex: 3;
+  ${mobile({ flex: "1" })}
 `;
 const Table = styled.div`
   display: flex;
@@ -65,7 +67,7 @@ const TableInput = styled.input`
   &:hover {
     background-color: #fbe7c6;
   }
-  ${mobile({ width: "100px" })}
+  ${mobile({ width: "120px" })}
 `;
 const TableInputMessage = styled.input`
   width: 20vw;
@@ -74,7 +76,7 @@ const TableInputMessage = styled.input`
   &:hover {
     background-color: #fbe7c6;
   }
-  ${mobile({ width: "120px", height: "7vh" })}
+  ${mobile({ width: "183px", height: "9vh" })}
 `;
 
 const Button = styled.button`
@@ -88,7 +90,7 @@ const Button = styled.button`
   &:hover {
     background-color: #f9fafa;
   }
-  ${mobile({ width: "80px" })}
+  ${mobile({ width: "90px", height: "75px" })}
 `;
 
 const Contact = () => {
